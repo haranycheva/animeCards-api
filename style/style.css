@@ -1,0 +1,256 @@
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+html {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+:root {
+  --accent-color: #695d52;
+  --text-color: #ffffff;
+  --cube:cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+/* page styless */
+
+.error-text {
+  color: var(--accent-color);
+  font-size: 72px;
+}
+
+.sort-title {
+  color: var(--text-color);
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  letter-spacing: 4px;
+  position: relative;
+}
+
+.sort-title::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 500px;
+  height: 1px;
+  background-color: var(--text-color);
+}
+
+.form {
+  background-color: var(--accent-color);
+  padding-top: 50px;
+  padding-bottom: 25px;
+  padding-left: 230px;
+}
+
+.filter-form {
+  color: var(--text-color);
+  font-size: 20px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.filter-form__submit-btn {
+  padding: 0 15px;
+  height: 40px;
+  border-radius: 4px;
+  border: 3px solid #ffffff;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 20px;
+  transition: background-color 300ms var(--cube);
+}
+
+.filter-form__submit-btn:hover {
+  background-color: #412722;
+}
+
+.filter-form__filter-types {
+  width: 200px;
+  color: #695d52;
+  border: transparent;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  background-color: #fff;
+}
+
+.anime {
+  padding-bottom: 40px;
+}
+
+.anime__pic {
+  overflow: hidden;
+  position: relative;
+}
+
+.anime__cards-list {
+  padding-top: 40px;
+  width: 1200px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.anime__card {
+  border: 2px solid var(--accent-color);
+  position: relative;
+  text-align: center;
+  border-radius: 14px;
+
+  box-shadow: rgba(71, 45, 48, 0.25) 0px 6px 12px -2px,
+    rgba(71, 45, 48, 0.3) 0px 3px 7px -3px;
+}
+
+.anime__card:hover {
+  box-shadow: rgba(71, 45, 48, 0.25) 0px 13px 27px -5px,
+    rgba(71, 45, 48, 0.3) 0px 8px 16px -8px;
+}
+
+.anime-link{
+  display: block;
+  padding: 25px 20px;
+}
+
+.anime__name {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.anime__raiting {
+  font-size: 20px;
+}
+
+.anime__desc {
+  width: 284px;
+
+  padding: 10px 0;
+
+  background-color: #ffffff;
+}
+
+.anime__card-desc {
+  transform: translateY(135%);
+  transition: transform 500ms var(--cube);
+  width: 100%;
+  height: 100%;
+  padding: 10px 5px;
+
+  background-color: rgba(84, 92, 82, 0.7);
+  color: var(--text-color);
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.anime__card:hover .anime__card-desc {
+  transform: translateY(0);
+}
+
+.btn-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.btn-list__btn {
+  padding: 5px 27px;
+  border-radius: 4px;
+  border: 3px solid var(--accent-color);
+  background-color: transparent;
+  color: var(--accent-color);
+  font-size: 36px;
+  transition:  background-color 300ms, color 300ms var(--cube) ;
+}
+
+.btn-list__btn:hover {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+.rating-list {
+  display: flex;
+  font-size: 24px;
+  width: 100px;
+  position: absolute;
+  top: 320px;
+  left: 10px;
+  transform: translateY(135%);
+  color: #2d3142;
+  transition: transform 500ms var(--cube);
+}
+
+.anime__card:hover .rating-list {
+  transform: translateY(0);
+}
+
+.rating__active {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rating__active::before {
+  content: "★★★★★";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffe1a8;
+}
+
+.footer {
+  background-color: var(--accent-color);
+  padding-top: 40px;
+  padding-bottom: 25px;
+  padding-left: 130px;
+  padding-right: 130px;
+  padding: 40px 130px 25px;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-type-none-gap {
+  gap: 171px;
+}
+.none {
+  display: none;
+}
+
+.footer__logo {
+  font-size: 36px;
+}
+
+.footer__logo:hover {
+  color: #ffe1a8;
+}
+
+.anime__favourite {
+}
+
+.anime__favourite::before {
+}

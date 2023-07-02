@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/loader.css">
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="form">
+      <h2 class="sort-title">Sorting</h2>
+      <form  class="filter-form" name="filters">
+        <label>
+          filter type:
+          <select class="filter-form__filter-types" name="filterType" id="">
+            <option value="">none</option>
+            <option value="ratingRank" >rating</option>
+            <option value="popularityRank">popularity</option>
+            <option value="episodeCount">episode count</option>
+          </select>
+        </label>
+        <div class="filter-form__display-metods">
+          <p>
+            <input
+              class="filter-form__display-metod"
+              type="radio"
+              name="displayMetod"
+              value="up"
+              checked
+            />Up
+          </p>
+          <p>
+            <input
+              class="filter-form__display-metods"
+              type="radio"
+              name="displayMetod"
+              value=""
+            />Down
+          </p>
+        </div>
+        <button type="submit" class="filter-form__submit-btn">Submit</button>
+      </form>
+    </header>
+    <main>
+      <section class="anime">
+        <ul class="anime__cards-list">
+        </ul>
+        <ul class="btn-list none">
+          <li>
+            <button type="button" class="undo btn-list__btn" disabled>
+              <
+            </button>
+          </li>
+          <li>
+            <button type="button" class="redo btn-list__btn">
+              >
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="#" class="footer__logo">Nyaaa॰</a>
+      <p class="footer__text">
+        hope you found some good animes :)
+      </p>
+      <!-- <input type="radio" name="favourite" class="anime__favourite"> -->
+    </footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
