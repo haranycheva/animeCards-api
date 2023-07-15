@@ -9,8 +9,8 @@ export function populateMurkup(){
     }
     const saveData = localStorage.load(keys.KEY__FILTERS)
     if(!saveData || !saveData.filterType){
-        refs.displayMetods.style.display = "none";
-        refs.filterForm.style.gap = "171px"
+        refs.displayMetods.classList.add("none")
+        refs.filterForm.classList.add("filter-type-none-gap")
         addCards()
         return
     }
