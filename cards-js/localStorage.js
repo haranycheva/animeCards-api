@@ -1,18 +1,16 @@
-
-
-function save(value, key){
-    const valueJSON = JSON.stringify(value);
-    return localStorage.setItem(key, valueJSON)
+function save(value, key) {
+  const valueJSON = JSON.stringify(value);
+  return localStorage.setItem(key, valueJSON);
 }
 
-function load(key){
-    const saveLocal = localStorage.getItem(key) 
+function load(key) {
+  const saveLocal = localStorage.getItem(key)
     ? JSON.parse(localStorage.getItem(key))
     : undefined;
-    return saveLocal;
+  return saveLocal;
 }
 
-export default{
-    save,
-    load,
-}
+export default {
+  save,
+  load,
+};

@@ -11,10 +11,15 @@ export function createCard({ attributes } = {}) {
     : attributes.titles.ja_jp
     ? attributes.titles.ja_jp
     : ""
-  ).replace(" ", "_")}" class="anime-link" target="_blank" rel="nofollow noreferrer noopener">
+  ).replace(
+    " ",
+    "_"
+  )}" class="anime-link" target="_blank" rel="nofollow noreferrer noopener">
     <div class="anime__pic">
     <img
-      src="${attributes.posterImage ? attributes.posterImage.small :  "./no-image.jpg"}"
+      src="${
+        attributes.posterImage ? attributes.posterImage.small : "./no-image.jpg"
+      }"
       alt=""
       class="anime__img"
       width="284px"
@@ -53,6 +58,4 @@ export function createCard({ attributes } = {}) {
     </a>
   </li>`;
 }
-// <p class="anime__raiting">${(attributes.averageRating / 10).toFixed(
-//   1
-// )}/10</p>
+
