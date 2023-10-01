@@ -16,10 +16,10 @@ export async function fetchTheCards(page, filters) {
   refs.btnList.classList.add("none")
   refs.cardsList.innerHTML = `<span class="loader"></span>`
   return fetch(url)
-    .then((res) => res.json())
-    .then(({ data }) => {
-      return data
-    }).catch(res =>  refs.cardsList.innerHTML = ERROR);
+    // .then((res) => res.json())
+    // .then(({ data }) => {
+    //   return data
+    // }).catch(res =>  refs.cardsList.innerHTML = ERROR);
 }
 
 

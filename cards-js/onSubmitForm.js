@@ -10,5 +10,7 @@ export function onSubmitForm(e){
     formData.forEach((v, k) =>  saveData[k] = v)
     localStorage.save(saveData, keys.KEY__FILTERS)
     localStorage.save(0, keys.KEY__PAGE)
+    refs.undoBtn.disabled = "true";
+    refs.undoBtn.classList.remove("can-hover-btn")
     addCards()
 }
